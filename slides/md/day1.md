@@ -1,6 +1,6 @@
 # Day 1
 
-+++
+---
 
 ## Agenda
 1. JavaScriptとは
@@ -12,11 +12,12 @@
 7. 制御構文
 8. 確認テスト  
 
-+++
+---
 
 ## JavaScriptとは
 
-+++
+---
+
 <div style="text-align: left;">
 WEB上でインタラクティブな表現をする為に開発されたオブジェクト指向のスクリプト言語
 </div>
@@ -24,7 +25,7 @@ WEB上でインタラクティブな表現をする為に開発されたオブ�
 
 ![alt](.\image\JavaScript_1.gif)
 
-+++
+---
 
 ### JavaScriptってどこで動いている？
 
