@@ -29,11 +29,11 @@ WEB上でインタラクティブな表現をする為に開発されたオブ�
 
 ### JavaScriptってどこで動いている？
 
-+++
+---
 
 ![alt](.\image\JavaScript_2.jpg)
 
-+++
+---
 
 <div style="text-align: left;">
 JavaScriptはサーバからレスポンスとして受け取られ、クライアント側で実行されます。
@@ -41,15 +41,15 @@ JavaScriptはサーバからレスポンスとして受け取られ、クライ�
 JavaScriptはインタープリター言語です。また、JavaScriptはシングルスレッドで処理を実行します。
 </div>
 
-+++
+---
 
 ### ブラウザによる挙動の変化
 
-+++
+---
 
 ![alt](.\image\JavaScript_3.jpg)
 
-+++
+---
 
 <div style="text-align: left;">
 JavaScriptはクライアントで実行すると言いましたが、実行しているエンジンは各ブラウザにて異なります。
@@ -57,11 +57,11 @@ JavaScriptはクライアントで実行すると言いましたが、実行し�
 コードは、ブラウザが何であるかではなく、ブラウザができることに基づいて記述します。
 </div>
 
-+++
+---
 
 ### JavaScriptを記述する場所
 
-+++
+---
 
 <div style="text-align: left;">
 JavaScriptはHTML内に記述する方法と、  
@@ -69,7 +69,7 @@ JavaScriptはHTML内に記述する方法と、
 </div>
 ![alt](.\image\JavaScript_4.gif)
 
-+++
+---
 
 ```html
 <!-- HTML内に記述する方法 -->
@@ -85,7 +85,7 @@ JavaScriptはHTML内に記述する方法と、
 </html>
 ```
 
-+++
+---
 
 ```html
 <!-- 外部ファイルにする場合 -->
@@ -107,19 +107,19 @@ testFunction(){
 }
 ```
 
-+++
+---
 
 ## JavaScriptの実行環境
 
-+++
+---
 
 JavaScriptはWebコンソールやNode.jsで間単に実行して動作を確認することができます。実演します。
 
-+++
+---
 
 ## コーディング規約
 
-+++
+---
 
 <div style="text-align: left;">
 JavaScriptのコーディング規約にはメジャーな以下２つがあります。
@@ -130,11 +130,11 @@ JavaScriptのコーディング規約にはメジャーな以下２つがあり�
 
 [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript "Airbnb JavaScript Style Guide")
 
-+++
+---
 
 ## 変 数
 
-+++
+---
 
 ```JavaScript
 var a;
@@ -150,7 +150,7 @@ console.log(a);  // undefined
 varやletやconstのことを宣言子といいます。変数を宣言しただけの状態では、変数には「undefiend」という値が入っています。
 </div>
 
-+++
+---
 
 ```JavaScript
 var a;
@@ -166,11 +166,11 @@ var c = 1,
 変数にはイコール演算子を使って値を代入することができます。また、変数の宣言と同時に値を代入することもできます。複数の変数をカンマ区切りに宣言することも可能です。
 </div>
 
-+++
+---
 
 ### 変数宣言の省略
 
-+++
+---
 
 ```JavaScript
 console.log(a);  // 参照エラー
@@ -179,7 +179,7 @@ console.log(a);  // 参照エラー
 宣言されていない変数を参照しようとすると参照エラーとなります。
 </div>
 
-+++
+---
 
 ```JavaScript
 a = 1;
@@ -191,11 +191,11 @@ console.log(a);  // 1
 グローバル変数をむやみに利用するのは良くありません。
 <div>
 
-+++
+---
 
 #### ホイスティング
 
-+++
+---
 
 ```JavaScript
 console.log(a);  // undefined
@@ -208,7 +208,7 @@ var a;
 これを変数宣言の巻上げ（ホイスティング）といいます。
 </div>
 
-+++
+---
 
 ```JavaScript
 console.log(x);  // undefined
@@ -218,11 +218,11 @@ console.log(x);  // "Hello"
 
 ただし、初期化の部分は巻き上げられません。
 
-+++
+---
 
 #### スコープ
 
-+++
+---
 
 ```JavaScript
 var a = "global";
@@ -242,7 +242,7 @@ JavaScriptは構文のみでスコープが決まってしまいます。これ�
 ローカルは関数内で宣言された変数で、有効範囲は関数内のみです。
 </div>
 
-+++
+---
 
 ```JavaScript
 var a = "global";
@@ -258,11 +258,11 @@ console.log(a);  // "global"
 変数名が衝突した場合、ローカル変数が有効となります。
 </div>
 
-+++
+---
 
 ## データ型
 
-+++
+---
 
 <div style="text-align: left;">
 データの種類はプリミティブ型とオブジェクト型の２種類あります。  
@@ -272,7 +272,7 @@ console.log(a);  // "global"
   プリミティブ型以外の全て
 </div>
 
-+++
+---
 
 ## 式と演算
 ### 算術二項演算子
@@ -285,7 +285,7 @@ console.log(a);  // "global"
 | /          | 除算        | a / b        | aとbを割った値         |
 | %          | 剰余算      | a % b        | aをbで割った余りの値    |
 
-+++
+---
 
 ```JavaScript
 1 + 2       //  3
@@ -304,14 +304,14 @@ True + True   //  2
 - nullは0に評価される。
 - undefinedはNaNとして評価される。
 
-+++
+---
 
 ### 算術三項演算子
 <div style="text-align: left;">
 条件 (三項) 演算子は JavaScript では唯一の、3 つのオペランドをとる演算子です。この演算子は、if 文のショートカットとしてよく用いられます。
 </div>
 
-+++
+---
 
 ```JavaScript
 // if文で書いた場合
@@ -327,11 +327,11 @@ var money = 10000;
 money > 5000 ? console.log(“お金持ち”) : console.log(“貧乏”);
 ```
 
-+++
+---
 
 ### 算術単項演算子
 
-+++
+---
 
 | 演算子         | 意味           | 例           | 例の意味                                       |
 |:---------------|:--------------|:-------------|:----------------------------------------------|
@@ -345,7 +345,7 @@ money > 5000 ? console.log(“お金持ち”) : console.log(“貧乏”);
 | --             | デクリメント   | --a          | aの値を1減らし、その後でaの値を評価する。         |
 |                |               | a--          | aの値を評価し、その後でaの値を1減らす            |
 
-+++
+---
 
 ### 算術代入演算子
 
@@ -357,7 +357,7 @@ money > 5000 ? console.log(“お金持ち”) : console.log(“貧乏”);
 | /=             | a /= b      | a = a / b    |
 | %=             | a %= b      | a = a % b    |
 
-+++
+---
 
 ### 論理演算子と関係演算子
 #### 等価演算子（==）同値演算子（===）
@@ -367,7 +367,7 @@ money > 5000 ? console.log(“お金持ち”) : console.log(“貧乏”);
 比較時の左右のオペランドの型が異なる場合は以下のように評価します。（暗黙の型変換）
 </div>
 
-+++
+---
 
 - undefinedとnullは等しい
 - 一方が数値、もう一方が文字列の場合、文字列を数値に変換して比較
@@ -375,7 +375,7 @@ money > 5000 ? console.log(“お金持ち”) : console.log(“貧乏”);
 - 一方がオブジェクトで、もう一方が数値か文字列の場合、オブジェクトをプリミティブ型に変換して比較
 - 上記以外は全て「等しくない」
 
-+++
+---
 
 [ 等価演算 ]
 等価演算では上記の暗黙の型変換によって、すべてtrueと評価されてしまいます。
@@ -387,7 +387,7 @@ true == "1"        // true
 2 == [2]           // true
 ```
 
-+++
+---
 
 [ 同値演算 ]
 同値演算では型と値を比較するので暗黙の型変換は行われません。
@@ -399,7 +399,7 @@ true === "1"        // false
 2 === [2]           // false
 ```
 
-+++
+---
 
 **※ 注意**
 ```JavaScript
@@ -409,7 +409,7 @@ NaN === NaN  // false
 NaNは自分自身も含めてすべての値と比較して等しくないと評価されます。
 </div>
 
-+++
+---
 
 #### 論理演算子
 
@@ -419,7 +419,7 @@ NaNは自分自身も含めてすべての値と比較して等しくないと�
 | &#124;&#124;  | a &#124;&#124; b  | aとbのいずれかがtrueの時はtrue、両方falseの時はfalse  |
 | !             | !a                | aがtrueの時はfalse、aがfalseの時はtrue               |
 
-+++
+---
 
 #### オペランドの短絡評価
 <div style="text-align: left;">
@@ -428,7 +428,7 @@ NaNは自分自身も含めてすべての値と比較して等しくないと�
 ０以外の数値、ブランク以外の文字列、オブジェクト、シンボルは **true** に変換される。
 </div>
 
-+++
+---
 
 <div style="text-align: left;">
 論理積と論理和は **短絡評価** を行います。
@@ -441,11 +441,11 @@ NaNは自分自身も含めてすべての値と比較して等しくないと�
 var player = name || member.name || "Taro";
 ```
 
-+++
+---
 
 ## 制御命令
 
-+++
+---
 
 ### if条件
 if条件は処理の分岐にしようします。
@@ -459,7 +459,7 @@ if ("条件") {
 }
 ```
 
-+++
+---
 
 <div style="text-align: left;">
 **true** とは何か
@@ -474,7 +474,7 @@ JavaScriptでは、以下の値は条件内でfalseと評価されます。
 - 空のストリング(""や'')
 - undefined
 
-+++
+---
 
 <div style="text-align: left;">
 条件を連続して記載したい場合は以下のように記載します。
@@ -490,7 +490,7 @@ if ("条件1") {
 }
 ```
 
-+++
+---
 
 ### switch条件
 <div style="text-align: left;">
@@ -498,7 +498,7 @@ switch条件も処理の分岐に使用しますが、ifで if-elseを延々と�
 明快で読みやすいコードがかけます。
 </div>
 
-+++
+---
 
 <div style="text-align: left;">
 [ 基本シンタックス ]
@@ -520,14 +520,14 @@ default:
 console.log(result);  // zero
 ```
 
-+++
+---
 
 <div style="text-align: left;">
 switch条件で気をつける点は、caseの最後はきちんとbreakしてあげることです。
 breakを省略した場合、次のcaseを満たすかどうかに関係なく、次のcase内のステートメントが実行されます。
 </div>
 
-+++
+---
 
 ```JavaScript
 var expression = 0,
@@ -549,13 +549,13 @@ default:
 // one
 ```
 
-+++
+---
 
 <div style="text-align: left;">
 上記の特性は複数の条件を記述する際に利用することもできます。
 </div>
 
-+++
+---
 
 ```JavaScript
 var expression = 0,
@@ -573,7 +573,7 @@ default:
 // 0でも1でもここを表示
 ```
 
-+++
+---
 
 ### forループ
 for文は繰り返しの処理を記述する際に利用します。
@@ -587,7 +587,7 @@ for ( 最初の式; 条件; 後の式) {
 }
 ```
 
-+++
+---
 
 <div style="text-align: left;">
 繰り返しの度に後の式を評価し、条件を満たすまで繰り返します。
@@ -603,7 +603,7 @@ for (var i = 0; i < array.length; i++) {
 }
 ```
 
-+++
+---
 
 <div style="text-align: left;">
 上記の例は、実は最適化されていません。
@@ -612,7 +612,7 @@ for (var i = 0; i < array.length; i++) {
 これを解消するには次のように記載します。
 </div>
 
-+++
+---
 
 ```JavaScript
 var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -621,7 +621,7 @@ for (var i = 0, max = array.length; i < max; i++) {
 }
 ```
 
-+++
+---
 
 ## コメント
 <div style="text-align: left;">
@@ -639,18 +639,18 @@ JavaScriptの構文内に必要に応じてコメントを記載することが�
 */
 ```
 
-+++
+---
 
 ## 確認テスト
 
-+++
+---
 
 ### 問1
 <div style="text-align: left;">
 "test.js"という名前のJSファイルをhtmlに読み込む際のscriptタグを書け。
 </div>
 
-+++
+---
 
 ### 問2
 <div style="text-align: left;">
@@ -674,7 +674,7 @@ console.log( x );
 console.log( y );
 ```
 
-+++
+---
 
 ### 問3
 次の3つの数値の比較を答えよ。
@@ -685,7 +685,7 @@ console.log( y );
 1 == '1'
 ```
 
-+++
+---
 
 ### 問4
 下記の２つのコード出力結果を答えよ
