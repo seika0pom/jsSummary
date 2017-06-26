@@ -195,6 +195,7 @@ var humanA = bmi();
 <div style="text-align: left;">
 [ 例：引数にプリミティブを指定した場合 ]
 </div>
+
 ```JavaScript
 function hoge(a) {return a*a};
 var a = 2;
@@ -213,6 +214,7 @@ console.log(b);  // 4
 <div style="text-align: left;">
 [ 例：引数にオブジェクトを指定した場合 ]
 </div>
+
 ```JavaScript
 function huga(p) { p.x++; p.y++; return p;};
 var a = {x:3, y:4};
