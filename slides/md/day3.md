@@ -321,6 +321,8 @@ terget.addEventListener(type, listener, useCapture);
 - **listener** ・・・イベントが発生したときに処理を行うコールバック関数への参照
 - **useCapture** ・・・イベントフェーズ
 
+---
+
 useCaptureには次のいずれかを指定します。
 **true** ・・・キャプチャリングフェーズ
 **false** ・・・バブリングフェーズ（省略時の初期値）
