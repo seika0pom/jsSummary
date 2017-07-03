@@ -15,24 +15,31 @@
 
 ---
 
-![alt](.\image\JavaScript_7.png)
-
+<div style="text-align: left;">
  DOMは、ツリーへのアクセスを可能にするメソッドを定義し、その結果、ドキュメント構造、スタイル、およびコンテンツを変更できます。 DOMは、さまざまなプロパティとメソッドを持つ、ノードとオブジェクトの構造化されたグループとしてドキュメントの表現を提供します。
+</div>
 
 ---
 
 ### Documentオブジェクト
 
+<div style="text-align: left;">
 Documentインターフェイスはブラウザーに読み込まれたウェブページを表し、DOMツリーであるウェブページのコンテンツへのエントリーポイントとして働きます。DOMツリーはbodyタグやtableタグなど、多数の要素を持ちます。
+</div>
 
-alt
+---
 
-alt
+### 要素の検索
 
-要素の検索
-
+<div style="text-align: left;">
 要素を検索するには、HTMLタグ内のidやclassまたはタグ自体やCSSセレクタなどで検索することができます。 Documentオブジェクトには要素にアクセスするための便利なメソッドが用意されています。（Document API 情報）
+</div>
 
+---
+
+### Documentインターフェースでの要素の検索
+
+```JavaScript
 //id指定
 document.getElementById('id');
 
@@ -45,14 +52,23 @@ document.getElementsByTagName('div');
 //cssセレクタで指定
 document.querySelector('#main .posts h1'); //最初の一つを取得
 document.querySelectorAll('a'); //すべて取得
-Elementインターフェースでの要素の検索
+```
 
+---
+
+### Elementインターフェースでの要素の検索
+
+<div style="text-align: left;">
 Element インターフェイスはDocumentの一部分を表現します。このインターフェイスは個々の種類の要素に共通するメソッドとプロパティを記述するものです。特異な挙動は Element から継承した特異なインターフェイスで記述します。
+</div>
 
-alt
+---
 
+<div style="text-align: left;">
 親子兄弟要素へのアクセスには以下のようにします。（Element API 情報）
+</div>
 
+```JavaScript
 //親要素
 element.parentNode;
 
@@ -66,6 +82,10 @@ element.previousElementSibling;
 
 //１つ後の要素
 element.nextElementSibling;
+```
+
+---
+
 DOMのアクセスにはコストがかかります。なので、DOMアクセスは最小限まで減らすべきです。 DOMアクセスを減らすとは以下のことです。 - DOMアクセスのループを避ける - DOM参照をローカル変数に代入して、そのローカル変数で作業する - 可能ならばセレクタAPIを利用する - HTMLコレクションを反復処理するときはlengthをキャッシュする
 
 [ 例：DOM参照をローカル変数に代入して、そのローカル変数で作業する ]
