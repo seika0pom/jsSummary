@@ -232,7 +232,7 @@ button.onclick = changeColor();
 ```
 
 <div style="text-align: left;">
-一般的なイベントの割り当てとしてよく見かけます。 従来の方法に無名関数を適用すると、関数を宣言する手数がなくなります。
+一般的なイベントの割り当てとしてよく見かけます。
 </div>
 
 ---
@@ -242,6 +242,10 @@ button.onclick = function() {
   // クリック時の処理を記述する
 }
 ```
+
+<div style="text-align: left;">
+従来の方法に無名関数を適用すると、関数を宣言する手数がなくなります。
+</div>
 
 ---
 
