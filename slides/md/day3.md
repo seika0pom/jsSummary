@@ -189,50 +189,140 @@ element.style.backgroundColor = '#ff0000';
 
 ---
 
-### イベント処理とは
+### イベント処理
 
-たとえば、Webページのロードやカーソルの移動、テキストエリアへの入力やボタンの押下などブラウザ内で発生するイベントで、JavaScriptはこれに応答することができます。イベントに応じてなにかしらの処理を記述することができます。
+<div style="text-align: left;">
+イベント駆動型のプログラムでは、イベントが発生したときに実行する関数を登録しておきます。
+イベント時に実行される関数を、**イベントハンドラ** もしくは **イベントリスナ** と言います。
+</div>
 
-イベントリスナーの作成方法
+---
 
-（使用してはいけない）インラインのイベントハンドラ
+### イベントハンドラの登録方法
 
+---
+
+### HTML要素のイベントハンドラ属性に設定する
+
+```HTML
+<!-- 一般的に使用NG -->
 <form action="#" method="post" onsubmit="validationForm();">
-// とか
+
 <a href="somepage.html" onclick="doSomething();">リンク</a>
-上記のように、HTMLのコード内に記述する方法をインラインのイベントハンドラといいます。 JavaScript関数をHTML要素のプロパティに割り当てる方法は、すべてのブラウザで確実に実行できる理由からよく見かけられます。 使用してはいけない理由は以下の3つです。
+```
 
-インラインで記述することにより、JavaScriptがHTML内に散在し見た目の悪さやデバッグのしづらさ
-HTML内に直接記述されると、プログレッシブエンハンスメントが適用できなくなることがある
-JavaScriptが常に機能すると思い込んで、標準的な機能を削いでしまう。
-従来のイベントハンドラ
+<div style="text-align: left;">
+上記のように、HTMLのコード内に記述する方法をインラインのイベントハンドラといいます。 JavaScript関数をHTML要素のプロパティに割り当てる方法は、すべてのブラウザで確実に実行できる理由からよく見かけられます。
+</div>
 
-window.onload = init;
+---
+
+特徴と問題点
+- インラインで記述することにより、JavaScriptがHTML内に散在し見た目の悪さやデバッグのしづらい
+- ある要素のあるイベントに対して、１つのイベントハンドラしか登録できない
+- HTML文書の読み込み時にイベントハンドラが設定されるため、簡単に設定できる
+
+---
+
+### DOMの要素オブジェクトのイベントハンドラプロパティに設定する
+
+```JavaScript
+var button = document.getElementById("button");
+button.onclick = changeColor();
+```
+
+<div style="text-align: left;">
 一般的なイベントの割り当てとしてよく見かけます。 従来の方法に無名関数を適用すると、関数を宣言する手数がなくなります。
+</div>
 
-window.onload = function() {
-  // ロード時の処理を記載
+---
+
+```JavaScript
+button.onclick = function() {
+  // クリック時の処理を記述する
 }
+```
+
+---
+
+```JavaScript
+button.onclick = null;
+```
+
+<div style="text-align: left;">
 イベントハンドラの削除は、適切なイベントプロパティに対してnullを代入することで実現できます。
+</div>
 
-window.onload = null;
-イベントが設定されているか確認するには、イベントプロパティ値を調べます。
+---
 
+```JavaScript
 if (typeof window.onload == 'function') {
   // 存在する
 }
-従来の方法では、ひとつのイベントハンドラしか割り当てられないという欠点があります。
+```
 
+<div style="text-align: left;">
+イベントが設定されているか確認するには、イベントプロパティ値を調べます。
+</div>
+
+---
+
+特徴と問題点
+- ある要素のあるイベントに対して、１つのイベントハンドラしか登録できない
+- HTMLとJavaScriptプログラムを分離して記述できます。保守性が向上します。
+- 同じ要素の同じイベントにイベントハンドラを登録すると、後から登録したもので上書きされてしまう。
+
+---
+
+```JavaScript
 document.getElementById('theForm').onsubmit = validation;
 document.getElementById('theForm').onsubmit = calculate;
+```
+
+<div style="text-align: left;">
 上記のコードでは２行目のコード以降、フォームの送信時にはcalculate関数だけ呼び出されるようになり、 validation()関数と関連付けられた最初のイベントハンドラは置き換えられてしまいます。
+</div>
 
-addEventListener()によるイベントハンドラ
+---
 
+### addEventListenerメソッドを用いる
+
+<div style="text-align: left;">
+addEventListenerメソッドを用いると、同じ要素の同じイベントに複数のイベントハンドラを登録できます。登録された
+関数をイベントリスナと言います。
+</div>
+
+---
+
+```JavaScript
 var theForm = document.getElementById('theForm');
 theForm.addEventListener("click", validation, false);
 theForm.addEventListener("click", calculate, false);
+```
+
+<div style="text-align: left;">
 addEventListener()関数を用いると、イベントハンドラの上書きはされません。 addEventListener()を利用する利点は以下となります。
+</div>
+
+---
+
+### 書式
+
+```JavaScript
+terget.addEventListener(type, listener, useCapture);
+```
+
+- **taeget** ・・・イベントリスナを登録する対象であるDOMノード
+- **type** ・・・イベントの種類を表す文字列("onclick"など)
+- **listener** ・・・イベントが発生したときに処理を行うコールバック関数への参照
+- **useCapture** ・・・イベントフェーズ
+
+useCaptureには次のいずれかを指定します。
+**true** ・・・キャプチャリングフェーズ
+**false** ・・・バブリングフェーズ（省略時の初期値）
+
+---
+
 
 イベントに 1 つ以上のハンドラを追加することができます。これは、特に、他のライブラリ/拡張で利用しても上手く動作する必要がある DHTMLライブラリや Mozilla の拡張 のために役立ちます。
 リスナーがアクティブ化されたときに、その動きを細かくコントロールすることを可能にします（キャプチャリング 対 バブリング）
