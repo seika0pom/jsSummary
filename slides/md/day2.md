@@ -298,6 +298,7 @@ thisは特殊なオブジェクトで、**呼び出し元** に左右され、�
 <div style="text-align: left;">
 [ メソッド呼び出しパターン ]
 </div>
+
 ```JavaScript
 var myObject = {
   value: 10,
@@ -318,6 +319,7 @@ myObject.show(); // 10
 <div style="text-align: left;">
 [ 関数呼び出し ]
 </div>
+
 ```JavaScript
 function show() {
   console.log(this);
