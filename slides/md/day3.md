@@ -86,10 +86,20 @@ element.nextElementSibling;
 
 ---
 
-DOMのアクセスにはコストがかかります。なので、DOMアクセスは最小限まで減らすべきです。 DOMアクセスを減らすとは以下のことです。 - DOMアクセスのループを避ける - DOM参照をローカル変数に代入して、そのローカル変数で作業する - 可能ならばセレクタAPIを利用する - HTMLコレクションを反復処理するときはlengthをキャッシュする
+<div style="text-align: left;">
+DOMのアクセスにはコストがかかります。なので、DOMアクセスは最小限まで減らすべきです。 DOMアクセスを減らすとは以下のことです。
+</div>
+ - DOMアクセスのループを避ける
+ - DOM参照をローカル変数に代入して、そのローカル変数で作業する
+ - 可能ならばセレクタAPIを利用する - HTMLコレクションを反復処理するときはlengthをキャッシュする
 
+---
+
+<div style="text-align: left;">
 [ 例：DOM参照をローカル変数に代入して、そのローカル変数で作業する ]
+</div>
 
+```JavaScript
 // アンチパターン（都度DOMにアクセスしている）
 var padding = document.getElementById("result").Style.padding,
     margin = document.getElementById("result").Style.margin
@@ -98,8 +108,13 @@ var padding = document.getElementById("result").Style.padding,
 var style = document.getElementById("result").style,
     padding = style.padding,
     margin = style.margin;
-要素の作成・追加
+```
 
+---
+
+### 要素の作成・追加
+
+```JavaScript
 //要素の作成
 var div = document.createElement('div');
 div.textContent = 'hoge';
@@ -115,8 +130,13 @@ element.parentNode.insertBefore(div, element);
 
 //要素の直後に追加
 element.parentNode.insertBefore(div, element.nextSibling);
-要素の削除
+```
 
+---
+
+### 要素の削除
+
+```JavaScript
 //特定の子要素削除
 element.removeChild(child);
 
@@ -128,8 +148,13 @@ while (element.firstChild) element.removeChild(element.firstChild);
 
 //子要素を全て削除(part2)
 element.textContent = null;
-属性の操作
+```
 
+---
+
+### 属性の操作
+
+```JavaScript
 //属性の取得
 element.getAttribute('href');
 
@@ -138,8 +163,13 @@ element.setAttribute('href', 'http://localhost:3000');
 
 //属性を削除
 element.removeAttribute('href');
-スタイル関連の操作
+```
 
+---
+
+### スタイル関連の操作
+
+```JavaScript
 //class追加
 element.classList.add('active');
 
@@ -151,9 +181,15 @@ element.classList.toggle('active');
 
 //スタイルを直接指定
 element.style.backgroundColor = '#ff0000';
-イベント
+```
 
-イベント処理とは
+---
+
+## イベント
+
+---
+
+### イベント処理とは
 
 たとえば、Webページのロードやカーソルの移動、テキストエリアへの入力やボタンの押下などブラウザ内で発生するイベントで、JavaScriptはこれに応答することができます。イベントに応じてなにかしらの処理を記述することができます。
 
