@@ -324,8 +324,8 @@ terget.addEventListener(type, listener, useCapture);
 ---
 
 useCaptureには次のいずれかを指定します。
-**true** ・・・キャプチャリングフェーズ
-**false** ・・・バブリングフェーズ（省略時の初期値）
+- **true** ・・・キャプチャリングフェーズ
+- **false** ・・・バブリングフェーズ（省略時の初期値）
 
 ---
 
@@ -382,7 +382,7 @@ link.addEventListener("mouseover", pageLoad, false);
 
 ---
 
-###イベント処理の委譲
+### イベント処理の委譲
 
 <div style="text-align: left;">
 イベント処理の委譲は、イベントリスナーを親要素に割り当て、その子からバブリングしてくるイベントを捕らえる方法です。 委譲を利用すると、複数の要素が同じイベントを持っている状況でパフォーマンスが向上します。
