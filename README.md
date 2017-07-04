@@ -1,6 +1,6 @@
 # JavaScript training materials
 
-## [Day1 Slide](https://seika0pom.github.io/jsSummary/slides/day1.html)
+## [Day1](https://seika0pom.github.io/jsSummary/slides/day1.html)
 
 - JavaScriptとは
 - JavaScriptの実行環境
@@ -12,4 +12,14 @@
 - 確認テスト
 
 
-## day2
+## [Day2](https://seika0pom.github.io/jsSummary/slides/day2.html)
+
+- オブジェクトとは
+- 関数について
+- 確認テスト
+
+## [Day3](https://seika0pom.github.io/jsSummary/slides/day3.html)
+
+- DOM
+- イベント
+- 確認テスト
