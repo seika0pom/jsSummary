@@ -74,7 +74,7 @@ required属性を指定したinput要素はフィールドを空にすること�
 ---
 
 #### HTML5 constraint validation API
-API情報：https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/Data_form_validation
+API情報：[データフォームの検証](https://developer.mozilla.org/ja/docs/Learn/HTML/Forms/Data_form_validation)
 
 ---
 
@@ -318,13 +318,17 @@ try {
 ---
 
 ## Ajax
-ajaxとは簡単にいうと、追加的な情報を取得したりサーバサイドの応答を引き起こすためにブラウザのJavaScriptからサーバ要求を出す処理です。
-非同期で
+<div style="text-align: left;">
+ajaxとは簡単にいうと、追加的な情報を取得したりサーバサイドの応答を引き起こすためにブラウザのJavaScriptからサーバ要求を出す処理です。Webサーバと非同期通信を行い、DOMを利用してダイナミックにWebページを書き換えることができます。
+</div>
 
 ---
 
 ### 基本
+<div style="text-align: left;">
 Ajax要求の実行は以下の3つの手順で始まります。
+</div>
+
 - Ajaxオブジェクトを作成する
 - 要求をだす
 - サーバからの応答を処理する
@@ -332,7 +336,9 @@ Ajax要求の実行は以下の3つの手順で始まります。
 ---
 
 #### Ajaxオブジェクトを作成する
+<div style="text-align: left;">
 ajaxオブジェクトはブラウザによって作成方法が少し異なります。
+</div>
 
 ---
 
@@ -344,3 +350,66 @@ if (window.XMLHttpRequest) {
   ajax = new ActiveXObject('MSXML2.XMLHTTP.3.0');
 }
 ```
+
+---
+### サーバと通信時の処理定義
+<div style="text-align: left;">
+非同期で処理を行う場合、サーバとの通信状態を監視して、変化したら処理を行うようにします。
+</div>
+
+---
+
+```JavaScript
+request.onreadystatechange = function() { ... }
+```
+
+<div style="text-align: left;">
+通信の状態が変化するとWebブラウザはreadystatechangeイベントを発生させます。
+</div>
+
+---
+
+```JavaScript
+request.onreadystatechange = function() {
+    if (request.readyState == 4) {
+        if (request.status == 200) {
+            // サーバがリクエストを正常に処理できた場合の処理を記述
+        }
+    }
+}
+```
+
+<div style="text-align: left;">
+HTTPのステータスコードを元に処理を記述します。
+</div>
+
+---
+
+### リクエストを送信して通信を開始する
+<div style="text-align: left;">
+通信時の処理が定義できたら、リクエストを送信します。
+リクエストを送信するにはopenメソッドで初期化しsendメソッドで送信します。
+</div>
+
+---
+
+```JavaScript
+request.open(method, url, [,async [,user [,password]]]);
+request.send(null);  // GETメソッドの場合
+```
+
+- method・・・HTTPメソッド
+- url・・・アクセス先URL
+- async・・・非同期通信かどうか（省略可能、初期値true(非同期通信)）
+- user・・・認証時のユーザ名
+- password・・・認証時のパスワード
+
+---
+
+## 確認テスト
+
+---
+
+問１
+
+---
