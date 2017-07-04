@@ -262,18 +262,22 @@ try {
 } catch (e) {
   console.log(e.message);
 }
+```
 
 ---
 
+```JavaScript
 // エラー情報を握りつぶして別なものにしている
 try {
   hoge();
 } catch (e) {
   return null;
 }
+```
 
 ---
 
+```JavaScript
 // エラーを握りつぶして別なものにしている(part2)
 try {
   hoge();
@@ -304,9 +308,11 @@ try {
 } catch (e) {
   console.log(e.toString());
 }
+```
 
 ---
 
+```JavaScript
 // 関数内でエラーが発生した場合は、上位の関数に例外処理を委譲する。
 try {
   hoge();
