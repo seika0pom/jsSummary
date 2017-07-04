@@ -23,3 +23,10 @@
 - DOM
 - イベント
 - 確認テスト
+
+## [Day4](https://seika0pom.github.io/jsSummary/slides/day4.html)
+
+- Validation
+- Exception
+- Ajax
+- 確認テスト
