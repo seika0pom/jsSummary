@@ -358,6 +358,7 @@ if (window.XMLHttpRequest) {
 ```
 
 ---
+
 ### サーバと通信時の処理定義
 <div style="text-align: left;">
 非同期で処理を行う場合、サーバとの通信状態を監視して、変化したら処理を行うようにします。
