@@ -60,3 +60,40 @@
 ![alt](.\image\JavaScript_10.png)
 
 ---
+
+<div style="text-align: left;">
+Web MVCではなくクライアントサイドMVCフレームワークで、コンポーネントやデータバインディングなどの機能を提供しています。そのため、アプリパターンではなく、コンポーネントパターンになります。
+</div>
+
+---
+
+### Vue.js
+
+![alt](.\image\JavaScript_11.jpg)
+
+---
+
+<div style="text-align: left;">
+双方向データバインディングの実現に特化しています。また、単一ファイルコンポーネント作成のためのツールも提供しています。
+</div>
+
+---
+
+### React
+
+![alt](.\image\JavaScript_12.png)
+
+---
+
+<div style="text-align: left;">
+UIを構築するためのライブラリで、HTMLとJavaScriptデータバインディング部分に特化している特徴を持ちます。
+大規模でも管理しやすく、仮想DOMが高速です。
+</div>
+
+---
+
+### JQuery
+
+![alt](.\image\JavaScript_13.png)
+
+---
