@@ -165,7 +165,7 @@ $("li:odd")  //奇数番目の要素
 
 <div style="text-align: left;">
 メソッドは以下のサイトに利用方法が詳しく記載してあります。
-</div>
+
 
 [jQuery日本語リファレンス](http://semooh.jp/jquery/)
 
@@ -173,6 +173,7 @@ $("li:odd")  //奇数番目の要素
 
 [githunリポジトリ](https://github.com/jquery/jquery)
 
+</div>
 ---
 
 ## 確認テスト

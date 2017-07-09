@@ -36,3 +36,9 @@
 - Jsフレームワーク
 - JQuery
 - 確認テスト
+
+## [Day6](https://seika0pom.github.io/jsSummary/slides/day6.html)
+
+-
+- 
+- 確認テスト
