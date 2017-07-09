@@ -47,3 +47,16 @@
 
 
 ---
+
+<div style="text-align: left;">
+グローバル変数を排除したり、モデルの保持が可能という特徴を持ちます。
+</div>
+
+---
+
+
+### Ember.js
+
+![alt](.\image\JavaScript_10.png)
+
+---
