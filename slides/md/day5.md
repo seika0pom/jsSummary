@@ -126,7 +126,7 @@ jqueryオブジェクトを作成して、そのオブジェクトに対して�
 ---
 
 <div style="text-align: left;">
-JQueryオブジェクトのは、**$('セレクタ')** とするだけで作成できます。
+JQueryオブジェクトのは、**$('セレクタ')** と記述するだけで作成できます。
 </div>
 
 ---
@@ -156,5 +156,25 @@ $("li:odd")  //奇数番目の要素
 ```
 
 <div style="text-align: left;">
-フィルタという仕組みを利用すればこのような書き方もできます。
+フィルタという仕組みを利用すれば上記のような書き方もできます。
 </div>
+
+---
+
+#### メソッドの使い方
+
+<div style="text-align: left;">
+メソッドは以下のサイトに利用方法が詳しく記載してあります。
+</div>
+
+[jQuery日本語リファレンス](http://semooh.jp/jquery/)
+
+[jQuery](https://jquery.com/)
+
+[githunリポジトリ](https://github.com/jquery/jquery)
+
+---
+
+## 確認テスト
+
+---
