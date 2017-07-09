@@ -97,3 +97,64 @@ UIを構築するためのライブラリで、HTMLとJavaScriptデータバイ�
 ![alt](.\image\JavaScript_13.png)
 
 ---
+
+<div style="text-align: left;">
+ウェブブラウザ用のJavaScriptコードをより容易に記述できるようにするために設計された軽量なJavaScriptライブラリ
+</div>
+
+---
+
+#### JQueryの基本的な書き方
+
+```JavaScript
+$("セレクタ").メソッド(パラメータ);
+
+```
+
+---
+
+```JavaScript
+$(document).ready(function(){
+  // ここに処理を記述します
+});
+```
+
+<div style="text-align: left;">
+jqueryオブジェクトを作成して、そのオブジェクトに対してメソッドを呼び出すのが基本です。
+</div>
+
+---
+
+<div style="text-align: left;">
+JQueryオブジェクトのは、**$('セレクタ')** とするだけで作成できます。
+</div>
+
+---
+
+#### セレクタの書き方
+
+---
+
+```JavaScript
+$("#navi")  // idセレクタ
+$(".navi")  // クラスセレクタ
+$("a img")  // 子孫セレクタ
+$("p.warning, p.attention");  // グループセレクタ
+```
+
+<div style="text-align: left;">
+CSSセレクタエンジンが付いているので簡単にDOMを指定することができます。
+</div>
+
+---
+
+```JavaScript
+$("li:first")  //一番始めの要素
+$("li:last")  //一番最後の要素
+$("li:even")  //偶数番目の要素
+$("li:odd")  //奇数番目の要素
+```
+
+<div style="text-align: left;">
+フィルタという仕組みを利用すればこのような書き方もできます。
+</div>
