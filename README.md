@@ -39,6 +39,13 @@
 
 ## [Day6](https://seika0pom.github.io/jsSummary/slides/day6.html)
 
--
-- 
+- オブジェクト
+- プロトタイプベース
+- 即時関数
+- クロージャ/無名関数
 - 確認テスト
+
+## [Day7](https://seika0pom.github.io/jsSummary/slides/day7.html)
+
+- ES6について
+
