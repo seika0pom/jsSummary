@@ -115,3 +115,58 @@ humanC.__proto__.__proto__.bmi // プロパティあり
 ```
 
 ---
+
+<div style="text-align: left;">
+bmiが表示されるまでの軌跡
+</div>
+
+```JavaScript
+// humanC.weight属性の参照
+humanC.weight  // プロパティなし
+
+humanC.__proto__.weight  // プロパティあり
+
+humanC.__proto__.__proto__.weight // プロパティあるが使用しない
+```
+
+---
+
+```JavaScript
+object.__proto__.__proto__.property
+```
+<div style="text-align: left;">
+自分にない機能や属性を__proto__の参照する別なオブジェクトを
+遡って検索する仕組みを **プロトタイプチェーン** と言います。
+</div>
+
+---
+
+```JavaScript
+humanA.__proto__ = otherObj;
+```
+
+<div style="text-align: left;">
+実際には上記のような記載はしません。オブジェクトを生成する際はコンストラクタ関数を
+一般的に使用します。
+</div>
+
+---
+
+```JavaScript
+// コンストラクタ関数定義
+var　Human = function(weight, height) {
+  this.weight = weight;
+  this.height = height;
+};
+
+// prototypeの拡張
+Human.prototype.bmi = function() {
+  console.log(“bmi is ”)
+  console.log(this.weight / (this.height * this.height));
+}
+
+// 利用
+var tom = new HumanA(50, 150);
+```
+
+---
