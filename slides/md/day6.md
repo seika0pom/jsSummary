@@ -250,3 +250,65 @@ console.log(bmi);  // 22.2
 ### クロージャ
 
 ---
+
+<div style="text-align: left;">
+クロージャとは「スコープチェーンに存在する変数への参照を保持している関数」
+</div>
+
+---
+
+```JavaScript
+function func() {
+  var value = 1;
+
+  function innerFunc() {
+    console.log(value);
+  }
+  innerFunc();
+}
+func(); // 1
+```
+
+<div style="text-align: left;">
+innerFunc内のvalueはスコープチェーンによってfunc関数で定義された変数への参照があります。
+</div>
+
+---
+
+```JavaScript
+function func() {
+  var value = 1;
+
+  function innerFunc() {
+    value++;
+  }
+  innerFunc();
+  console.log(value); // 2
+}
+func();
+```
+
+<div style="text-align: left;">
+innerFunc内のvalueは値のコピーではなく参照なので上記のように値を変更することができる。
+</div>
+
+---
+
+```JavaScript
+var countUp = function () {
+    var count = 0;
+    return function () {
+        return count++;
+    };
+}();
+
+console.log(countUp());  //1
+console.log(countUp());  //2
+console.log(countUp());  //3
+```
+
+<div style="text-align: left;">
+クロージャの一つの利点として変数をプライベートな変数として扱うことができます。
+</div>
+
+---
