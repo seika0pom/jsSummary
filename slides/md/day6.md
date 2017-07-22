@@ -93,3 +93,25 @@ humanCにはプロパティを設定していませんがbmiは表示されま�
 </div>
 
 ---
+
+<div style="text-align: left;">
+各オブジェクトは__proto__を介して連鎖的に参照しています。
+bmiが表示できたのは、humanCオブジェクトがhumanAオブジェクトまでの参照があるからです。
+</div>
+
+---
+
+<div style="text-align: left;">
+bmiが表示されるまでの軌跡
+</div>
+
+```JavaScript
+// humanC.bmi()メソッドコール
+humanC.bmi  // プロパティなし
+
+humanC.__proto__.bmi  // プロパティなし
+
+humanC.__proto__.__proto__.bmi // プロパティあり
+```
+
+---
