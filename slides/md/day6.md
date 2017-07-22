@@ -60,3 +60,28 @@ var obj = {
 ![alt](.\image\JavaScript_14.png)
 
 ---
+
+![alt](.\image\JavaScript_15.png)
+
+---
+
+```JavaScript
+var　humanA = {
+  weight = 60;
+  height = 1.75;
+  bmi: function() {
+    console.log(“bmi is ”)
+    console.log(this.weight / (this.height * this.height));
+  }
+};
+
+var humanB = { weight: 50, height: 1.5 };
+humanB.__proto__ = humanA;
+
+var humanC = {};
+humanC.__proto__ = humanB;
+
+humanC.bmi();
+// ⇒bmi is 22.2
+
+```
