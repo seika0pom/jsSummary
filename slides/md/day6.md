@@ -170,3 +170,83 @@ var tom = new HumanA(50, 150);
 ```
 
 ---
+
+### 即時関数
+
+---
+
+<div style="text-align: left;">
+即時関数は現在のスコープを汚染せずに新たなスコープを作成するための手段です。
+</div>
+
+---
+
+```JavaScript
+//即時関数の構文その１
+(function () {
+    //関数の中身・・・
+}());
+
+//即時関数の構文その２
+(function () {
+    //関数の中身・・・
+})();
+```
+
+---
+
+アンチパターン１
+
+```JavaScript
+// 関数を使わない場合
+var bmi = 0;
+
+// 一時的な変数だがグローバルに宣言しているので予期せぬ動きを引き起こす可能性がある
+a = 50;
+b = 1.5;
+
+bmi = a / (b * b);
+
+console.log(bmi);  // 22.2
+```
+
+---
+
+アンチパターン２
+
+```JavaScript
+// 名前付き関数を使用する場合
+var bmi = 0;
+
+// パターン１よりいいが先ほどの問題は完全に解決されていない
+calcBmi = function() {
+  var a = 50,
+      b = 1.5;
+
+  return a / (b * b)
+}
+bmi = calcBmi();
+console.log(bmi);  // 22.2
+```
+
+---
+
+```JavaScript
+// 即時関数を使用する場合
+(function () {
+
+    var bmi = function() {
+      var a = 50;
+      var b = 1.5;
+      return a / (b * b);
+    };
+    console.log("bmi is " + bmi());
+　  // bmi is 22.2....
+}());
+```
+
+---
+
+### クロージャ
+
+---
