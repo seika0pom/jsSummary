@@ -1,4 +1,4 @@
-# Day5
+# Day6
 
 ---
 
@@ -18,9 +18,7 @@ JavaScriptの基本はオブジェクトです。
 </div>
 
 ```JavaScript
-
 var obj = {};
-
 ```
 
 ---
@@ -31,11 +29,9 @@ var obj = {};
 </div>
 
 ```JavaScript
-
 var obj = {
     key : value
 };
-
 ```
 
 ---
@@ -46,11 +42,9 @@ var obj = {
 </div>
 
 ```JavaScript
-
 var obj = {
     key : function () { .. };
 };
-
 ```
 
 ---
@@ -63,6 +57,6 @@ var obj = {
 
 ---
 
-クラスベース
-
 ![alt](.\image\JavaScript_14.png)
+
+---
