@@ -88,3 +88,8 @@ humanC.bmi();
 // ⇒bmi is 22.2
 
 ```
+<div style="text-align: left;">
+humanCにはプロパティを設定していませんがbmiは表示されます。
+</div>
+
+---
