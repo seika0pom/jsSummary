@@ -75,11 +75,11 @@ JavaScriptはHTML内に記述する方法と、
 <!-- HTML内に記述する方法 -->
 <html>
   <head>
-    <title>HELL WORLD</title>
+    <title>HELLO WORLD</title>
   </head>
   <body>
     <script type="text/javascript">
-	document.writeln('HELL javascript');
+	document.writeln('HELLO javascript');
     </script>
   </body>
 </html>
@@ -91,7 +91,7 @@ JavaScriptはHTML内に記述する方法と、
 <!-- 外部ファイルにする場合 -->
 <html>
   <head>
-    <title>HELL WORLD</title>
+    <title>HELLO WORLD</title>
     <script type="text/javascript" src="test.js"></script>
   </head>
   <body>
