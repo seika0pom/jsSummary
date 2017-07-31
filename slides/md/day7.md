@@ -151,6 +151,7 @@ console.log(NUM_LIST);   // [5, 2, 3]
 ---
 
 <div style="text-align: left;">Before</div>
+
 ```JavaScript
 // 普通の文字列は「'」シングルクォート
 var str = 'あ\nい\nう';
@@ -166,6 +167,7 @@ console.log(str);
 ---
 
 <div style="text-align: left;">After</div>
+
 ```JavaScript
 // テンプレート文字列は「`」バッククォート
 var str = `あ
@@ -179,6 +181,7 @@ console.log(str);
  * う
  */
 ```
+
 「\n」を使用しなくても改行可能
 
 ---
@@ -186,6 +189,7 @@ console.log(str);
 変数の文字列への埋め込み
 
 <div style="text-align: left;">Before</div>
+
 ```JavaScript
 var name = '太郎';
 var age = 23;
@@ -198,6 +202,7 @@ console.log(str); // 私の名前は太郎です。23歳です
 ---
 
 <div style="text-align: left;">After</div>
+
 ```JavaScript
 var name = '太郎';
 var age = 23;
@@ -215,6 +220,7 @@ console.log(str); // 私の名前は太郎です。23歳です
 ---
 
 <div style="text-align: left;">Before</div>
+
 ```JavaScript
 var name = '太郎';
 var age  = 23;
@@ -225,6 +231,7 @@ console.log(name, age)   // 太郎 23
 ---
 
 <div style="text-align: left;">After</div>
+
 ```JavaScript
 var [name, age] = ['太郎', 23];
 
@@ -236,6 +243,7 @@ console.log(name, age)   // 太郎 23
 分割代入による値の入れ替え
 
 <div style="text-align: left;">Before</div>
+
 ```JavaScript
 var num1 = 10;
 var num2 = 20;
@@ -253,6 +261,7 @@ console.log(num1, num2) // 20 10
 ---
 
 <div style="text-align: left;">After</div>
+
 ```JavaScript
 var num1 = 10;
 var num2 = 20;
@@ -274,6 +283,7 @@ console.log(num1, num2); // 20 10
 ---
 
 <div style="text-align: left;">Before</div>
+
 ```JavaScript
 function show(name) {
   // nameがundefinedなら
@@ -291,6 +301,7 @@ show('太郎');   // 太郎
 ---
 
 <div style="text-align: left;">After</div>
+
 ```JavaScript
 function show(name = 'タロウ') {
   console.log(name);
