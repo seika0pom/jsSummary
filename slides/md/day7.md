@@ -130,7 +130,7 @@ NUM = 2;   // エラー
 しかし、オブジェクトや配列はプロパティの変更ができてしまいます。
 </div>
 
-----
+---
 
 ```JavaScript
 // 直接変更は不可
@@ -148,7 +148,7 @@ console.log(NUM_LIST);   // [5, 2, 3]
 
 #### テンプレート文字列
 
-----
+---
 
 <div style="text-align: left;">Before</div>
 ```JavaScript
