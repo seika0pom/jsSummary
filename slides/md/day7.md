@@ -161,9 +161,9 @@ console.log(str);
  * い
  * う
  */
- ```
+```
 
- ---
+---
 
 <div style="text-align: left;">After</div>
 ```JavaScript
@@ -178,7 +178,7 @@ console.log(str);
  * い
  * う
  */
- ```
+```
 「\n」を使用しなくても改行可能
 
 ---
