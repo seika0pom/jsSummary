@@ -5,6 +5,7 @@
 - JavaScriptとは
 - JavaScriptの実行環境
 - コーディング規約
+- プログラムの書き方
 - 変数
 - データ型
 - 演算
@@ -48,4 +49,3 @@
 ## [Day7](https://seika0pom.github.io/jsSummary/slides/day7.html)
 
 - ES6について
-
