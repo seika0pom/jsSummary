@@ -71,6 +71,23 @@ console.log(human["age"]);  // 20
 
 ---
 
+### プロパティの追加と削除
+<div style="text-align: left;">
+存在しないプロパティ名のプロパティ値に値を代入すると、プロパティが追加されます。
+delete演算子を使用するとプロパティを削除できます。
+</div>
+
+```JavaScript
+var obj = {};
+obj.value = "test";
+console.log(obj);  // obj{value: "test"}
+
+delete obj.value;
+console.log(obj);  // obj{}
+```
+
+---
+
 ### 組み込みオブジェクト
 <div style="text-align: left;">
 これまではオリジナルのオブジェクトを作成してきましたが、JavaScriptには組み込みのオブジェクトが提供されています。
@@ -412,55 +429,3 @@ writeCode関数への引数としてcat関数を指定していますが、括�
 ## 確認テスト
 
 ---
-
-### 問1
-<div style="text-align: left;">
-参照型の比較において,配列の中身が同じでも結果がFalseになるのは何故か?
-</div>
-
----
-
-### 問2
-<div style="text-align: left;">
-オブジェクトのプロパティへアクセスするにはどのように記述するか?
-</div>
-
----
-
-### 問3
-<div style="text-align: left;">
-以下 JavaScript コードを実行して、空欄1 で test1 関数、空欄2 で test2 関数、空欄3 で test3 関数をそれぞれ実行したい。それぞれの空欄にはどう記述すればよいか。
-</div>
-
----
-
-```JavaScript
-function test1() {
-	console.log( 1 );
-}
-
-var test2 = new Function( 'console.log( 2 );' );
-
-var test3 = function() {
-	console.log( 3 );
-}
-
-// [ 空欄1 ]
-// [ 空欄2 ]
-// [ 空欄3 ]
-```
-
----
-
-### 問4
-<div style="text-align: left;">
-関数の引数が固定ではなく、任意の個数となっている引数のことをなんと呼ぶか？
-</div>
-
----
-
-### 問5
-<div style="text-align: left;">
-Javascriptが対応しているスコープは次のうちどれか選びなさい
-グローバルスコープ　ブロックスコープ　関数スコープ　セッションスコープ
-</div>
