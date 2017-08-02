@@ -392,6 +392,4 @@ link.addEventListener("mouseover", pageLoad, false);
 
 確認テスト
 
-問1
-
-問2
+---
