@@ -28,6 +28,17 @@ WEB上でインタラクティブな表現をする為に開発されたオブ�
 
 ---
 
+### JavaScriptの技術的要素
+
+---
+
+<div style="text-align: left;">
+JavaScriptの中核となる技術はECMAScriptとして規定されています。
+Ecma Internationalという組織が標準化を行っており、ECMA-262という文書で公開しています。
+</div>
+
+---
+
 ### JavaScriptってどこで動いている？
 
 ---
@@ -280,6 +291,7 @@ console.log(a);  // 参照エラー
 a = 1;
 console.log(a);  // 1
 ```
+
 <div style="text-align: left;">
 こっちはエラーになりません。
 これは宣言を省略して値を代入すると自動でグローバル変数となってしまうからです。
@@ -354,6 +366,22 @@ console.log(a);  // "global"
 </div>
 
 ---
+
+```JavaScript
+
+if (true) {
+    var hoge = 'hoge';
+    console.log(hoge);  // hoge
+}
+console.log(hoge);  // hoge
+
+```
+
+<div style="text-align: left;">
+JavaScriptにはブロックスコープはありません。ifブロック内で宣言したhogeは
+グローバルスコープに宣言したことになります。
+</div>
+
 
 ## データ型
 
