@@ -366,7 +366,6 @@ console.log(a);  // "global"
 ---
 
 ```JavaScript
-
 if (true) {
     var hoge = 'hoge';
     console.log(hoge);  // hoge
