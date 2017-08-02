@@ -566,6 +566,41 @@ var player = name || member.name || "Taro";
 
 ---
 
+### その他の演算
+
+---
+
+#### typeof演算子
+
+<div style="text-align: left;">
+オペランドのデータ型を示す文字列を返却します。
+</div>
+
+```JavaScript
+var str = 'javascript';
+console.log(typeof str);  // string
+```
+
+---
+
+#### 条件演算子
+
+<div style="text-align: left;">
+与えられた条件の真偽によって処理を選びます。
+
+```JavaScript
+// 以下のif文は次のように条件演算子を使って記載できる。
+if (s % 2 == 0) {
+    number = "偶数";
+} else {
+    number = "奇数";
+}
+
+var number = (s % 2 == 0) ? "偶数" : "奇数";
+```
+
+---
+
 ## 制御命令
 
 ---
@@ -626,6 +661,7 @@ switch条件も処理の分岐に使用しますが、ifで if-elseを延々と�
 <div style="text-align: left;">
 [ 基本シンタックス ]
 </div>
+
 ```JavaScript
 var expression = 0,
     result = '';
@@ -704,6 +740,7 @@ for文は繰り返しの処理を記述する際に利用します。
 <div style="text-align: left;">
 [ 基本シンタックス ]
 </div>
+
 ```JavaScript
 for ( 最初の式; 条件; 後の式) {
   // ここに繰り返し行いたい処理を記載する。
